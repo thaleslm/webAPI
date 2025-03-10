@@ -170,3 +170,4 @@ C:\Users\woami\Desktop\studys\WebAPI\obj\Debug\net8.0\WebAPI.pdb
 C:\Users\woami\Desktop\studys\WebAPI\obj\Debug\net8.0\WebAPI.genruntimeconfig.cache
 C:\Users\woami\Desktop\studys\WebAPI\obj\Debug\net8.0\ref\WebAPI.dll
 C:\Users\woami\Desktop\studys\WebAPI\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\woami\Desktop\studys\WebAPI\obj\Debug\net8.0\WebAPI.sourcelink.json

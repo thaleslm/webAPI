@@ -17,7 +17,7 @@ namespace firstProject.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetAll() 
+        public IActionResult GetAll()
         {
             var stocks = _context.Stocks.ToList()
                 .Select(s => s.ToStockDto());
@@ -28,7 +28,7 @@ namespace firstProject.Controllers
         public IActionResult GetById([FromRoute] int id)
         {
             var stock = _context.Stocks.Find(id);
-            if(stock == null)
+            if (stock == null)
             {
                 return NotFound();
             }
@@ -64,6 +64,22 @@ namespace firstProject.Controllers
             _context.SaveChanges();
 
             return Ok(stockModel.ToStockDto());
-        }   
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult remove([FromRoute] int id)
+        {
+            var stockModel = _context.Stocks.Find(id);
+            if(stockModel == null)
+            {
+                return NotFound();
+            }
+            _context.Stocks.Remove(stockModel);
+            _context.SaveChanges();
+
+            return Ok();
+
+        }
+
     }
 }
